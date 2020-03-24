@@ -510,8 +510,8 @@ table {
     }
 
     .ant-modal-content {
-        width: 200% !important;
-        margin-left: -160px !important;
+        width: 100% !important;
+        margin-left: 10px !important;
     }
 
     /* .ant-modal-footer {

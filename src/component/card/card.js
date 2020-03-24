@@ -120,14 +120,16 @@ class CardPokemon extends Component {
                             <img src={this.state.imgUrl} style={{width: '120px', height: '120px'}}/>
                             {this.state.types.map((type, i) => {
                                 return(
-                                    <div 
+                                <>    
+                                    <span 
                                         style={
                                             {
-                                                float: 'left', 
+                                                display: 'inline',
                                                 marginLeft: '5px', 
                                                 backgroundColor: `${typeColors[type]}`, 
                                                 paddingLeft: '5px', paddingRight: '5px', 
-                                                borderRadius: '3px', color: '#fff'
+                                                borderRadius: '3px', color: '#fff',
+                                                marginTop: '10px'
                                             }
                                         } 
                                         key={i}
@@ -137,7 +139,9 @@ class CardPokemon extends Component {
                                             .split(' ')
                                             .map( type => type.charAt(0).toUpperCase() + type.substring(1))
                                         }
-                                    </div>
+                                    </span>
+                                    
+                                </>
                                 )
                             })}
                         </Col>
