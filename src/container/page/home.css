@@ -1,0 +1,531 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* /////////////////////////////////////////////////// */
+
+
+
+    .container {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        background-color: #DDDDDD;
+        height: 100%;
+    }
+
+    html ::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .header {
+        position: fixed;
+        width: 100%;
+        height: 50px;
+        background-color: #EF5350;
+        z-index: 999;
+    }
+
+    .headerImg {
+        width: 100px;
+        height: 40px;
+        margin-left: 20px;
+        margin-top: 3px;
+        cursor: pointer;
+    }
+
+    .menuBar {
+        display: flex;
+        flex-direction: row;
+        float: right;
+        margin-top: 12px;
+        margin-right: 10px;
+    }
+
+    .menuBar li {
+        margin-right: 10px;
+        font-size: 20px;
+        color: #FFCB05;
+    }
+
+    .github {
+        cursor: pointer;
+        transition: .2s;
+    }
+
+    .linkedIn {
+        cursor: pointer;
+        transition: .2s;
+
+    }
+
+    .github:hover, .linkedIn:hover {
+        color: rgb(209, 177, 70);
+        
+    }
+
+    .git {
+        width: 110%;
+        text-align: center;
+        margin-right: 10px;
+        height: 50px;
+        line-height: 50px;
+        margin-top: -15px;
+        transition: .1s;
+        user-select: none;
+    }
+
+    .git:active {
+        border-radius: 10px;
+        background-color: rgba(209, 177, 70, .5);
+    }
+
+    .menuBar .line {
+        font-weight: 50;
+    }
+
+    .search-bar {
+        margin-right: 20px;
+        margin-top: -3px;
+        border-radius: 25px;
+        display: none;
+    }
+
+    .svg {
+        transform: rotate(180deg);
+    }
+
+    .field {
+        width: 60em;
+        background-color: whitesmoke;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        margin: auto;
+    }
+
+    /*isi*/
+
+    .title {
+        font-size: 25px;
+        text-align: center;
+        padding-top: 30px;
+        margin-bottom: 50px;
+    }
+
+    .card-container {
+        margin-left: 75px;
+    }
+
+    .card {
+        float: left;
+        margin-left: 15px;
+        padding-bottom: 10px
+    }
+
+    .card1 {
+        margin-right: 15px;
+        margin-bottom: 15px;
+        float: left;
+        display: flex;
+        flex: 1;
+    }
+
+    .ant-card-body {
+        padding: 10px;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    .img {
+        transform: rotate(360deg);
+        position: fixed;
+        bottom: 0;
+        z-index: 99;
+        padding-bottom: 10px
+    }
+
+    .next {
+        display: inline-block;
+        width: 80px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: #EF5350;
+        color: #FFCB05;
+        text-align: center;
+        line-height: 40px;
+        user-select: none;
+        margin-left: 500px;
+        margin-right: 85px;
+        font-weight: bold;
+        transition: .2s;
+        margin-top: -30px;
+    }
+
+    .back {
+        display: inline-block;
+        width: 80px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: #EF5350;
+        color: #FFCB05;
+        text-align: center;
+        line-height: 40px;
+        user-select: none;
+        font-weight: bold;
+        transition: .2s;
+        margin-top: -20px;
+        margin-left: 50px;
+    }
+
+    .btnDisabled {
+        display: inline-block;
+        width: 80px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: #fdcccc;
+        color: rgb(255, 227, 113);
+        text-align: center;
+        line-height: 40px;
+        user-select: none;
+        font-weight: bold;
+        transition: .2s;
+        margin-top: -20px;
+        margin-left: 50px;
+    }
+
+    .back:hover, .next:hover {
+        background-color: whitesmoke;
+        border: 1px solid #FFCB05;
+        color: #EF5350;
+        cursor: pointer;
+    }
+
+    .next-back {
+        margin-bottom: 20px;
+    }
+
+    .loading-text {
+        margin-left: 275px;
+    }
+
+    .ant-card-head {
+        padding: 0 10px 0 10px !important;
+    }
+
+    .pokemonName {
+        margin: auto;
+    }
+
+
+
+/*Responsif*/
+
+/* @media (max-width : 800px) {
+    .wave {
+        display: none;
+    }
+
+    .field {
+        padding-top: 100px;
+    }
+} */
+
+/* @media (max-width : 800px) {
+    .ant-card {
+        width: 700px !important;
+        height: 700px !important;
+    }
+
+    .image-card {
+        width: 500px;
+        height: 500px;
+        margin: auto !important;
+    }
+
+    .wave {
+        display: none;
+    }
+
+    .field {
+        padding-top: 120px;
+    }
+
+    .pokemonName {
+        font-size: 45px !important;
+        text-align: center;
+    }
+
+    .ant-card-head {
+        width: 90px;
+    }
+
+    .ant-card-head-title {
+        font-size: 30px !important;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+    .header {
+        height: 100px;
+    }
+
+    .headerImg {
+        width: 200px;
+        height: 80px;
+        margin-top: 6px;
+    }
+
+    .menuBar li {
+        font-size: 35px !important;
+        margin-top: 20px;
+    }
+
+    .menuBar .search-bar {
+        display: none;
+    }
+} */
+
+    @media (max-width : 1000px) {
+        .ant-card {
+            width: 350px !important;
+            height: 350px !important;
+        }
+
+        .wave {
+            display: none;
+        }
+    
+        .field {
+            padding-top: 120px;
+        }
+
+        .image-card {
+            width: 250px;
+            height: 250px;
+            margin: auto !important;
+        }
+    
+        .pokemonName {
+            font-size: 35px !important;
+            text-align: center;
+        }
+    
+        .ant-card-head {
+            width: 120px !important;
+        }
+    
+        .ant-card-head-title {
+            font-size: 30px !important;
+            display: flex;
+            flex: 1;
+            justify-content: center;
+        }
+    
+        .title {
+            font-size: 40px;
+        }
+        .header {
+            height: 100px;
+        }
+    
+        .headerImg {
+            width: 200px;
+            height: 80px;
+            margin-top: 6px;
+        }
+    
+        .menuBar li {
+            font-size: 35px !important;
+            margin-top: 20px;
+        }
+    
+        .menuBar .search-bar {
+            display: none;
+        }
+
+        .ant-modal-content {
+            width: 200% !important;
+            margin-left: -160px !important;
+        }
+
+        /* .ant-modal-footer {
+            position: absolute;
+            right: 20px;
+            bottom: 20px
+        } */
+
+        .ant-modal-title {
+            font-size: 30px;
+        }
+
+        .ant-btn {
+            width: 70px;
+            height: 40px;
+        }
+}
+
+@media (min-width : 2560px) {
+    .ant-card {
+        width: 350px !important;
+        height: 350px !important;
+    }
+
+    .wave {
+        display: none;
+    }
+
+    .field {
+        padding-top: 120px;
+        width: 80%;
+    }
+
+    .image-card {
+        width: 250px;
+        height: 250px;
+        margin: auto !important;
+    }
+
+    .pokemonName {
+        font-size: 35px !important;
+        text-align: center;
+    }
+
+    .ant-card-head {
+        width: 120px !important;
+    }
+
+    .ant-card-head-title {
+        font-size: 30px !important;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+    .header {
+        height: 100px;
+    }
+
+    .headerImg {
+        width: 200px;
+        height: 80px;
+        margin-top: 6px;
+    }
+
+    .menuBar li {
+        font-size: 35px !important;
+        margin-top: 20px;
+    }
+
+    .menuBar .search-bar {
+        display: none;
+    }
+
+    .next-back {
+        position: relative;
+    }
+
+    .next {
+        position: fixed;
+        top: 600px;
+        right: 0;
+        width: 150px;
+        height: 60px;
+        font-size: 25px;
+        line-height: 60px;
+        top: 610px;
+    }
+
+    .back {
+        position: fixed;
+        top: 600px;
+        left: 0;
+        width: 150px;
+        height: 60px;
+        font-size: 25px;
+        line-height: 60px;
+        top: 600px;
+    }
+
+    .btnDisabled {
+        position: fixed;
+        top: 600px;
+        left: 0;
+        width: 150px;
+        height: 60px;
+        font-size: 25px;
+        line-height: 60px;
+        top: 600px;
+    }
+
+    .card {
+        margin-left: 45px !important;
+    }
+
+    .ant-modal-content {
+        width: 200% !important;
+        margin-left: -160px !important;
+    }
+
+    /* .ant-modal-footer {
+        position: absolute;
+        right: 20px;
+        bottom: 20px
+    } */
+
+    .ant-modal-title {
+        font-size: 30px;
+    }
+
+    .ant-btn {
+        width: 80px;
+        height: 50px;
+    }
+}
