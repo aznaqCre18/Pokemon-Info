@@ -100,7 +100,9 @@ class Home extends Component{
                         <div className="clear"></div>
                         </div>
                     </div>
-    
+                <div className="footer">
+                    Copyright © 2020 Aziz Nur Abdul Qodir. All Rights Reserved
+                </div>
                 </div>
             </>
         )
