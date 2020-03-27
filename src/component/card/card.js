@@ -20,7 +20,8 @@ class CardPokemon extends Component {
 
         height: '',
         weight: '',
-        types: []
+        types: [],
+        
     }
 
     setModal2Visible(show) {
@@ -45,6 +46,7 @@ class CardPokemon extends Component {
         const height = Math.round((data.data.height * 0.328084 + 0.0001) * 100) / 100;
         const weight = Math.round((data.data.weight * 0.220462 + 0.0001) * 100) / 100;
         const types = data.data.types.map( type => type.type.name);
+        
 
         this.setState({
             imgUrl,
@@ -56,6 +58,10 @@ class CardPokemon extends Component {
 
     handleCardClick = () => {
         this.dataPokemon(this.props.name)
+    }
+
+    onOk = (name) => {
+        window.location.href=`http://localhost:3000/#/detail/${name}`
     }
 
     getImage = (url) => {
@@ -103,7 +109,7 @@ class CardPokemon extends Component {
                     style={{fontFamily:'Segoe UI'}}
                     centered
                     visible={this.state.modal2Visible}
-                    onOk={() => this.setState({modal2Visible: false})}
+                    onOk={() => this.onOk(this.props.name)}
                     onCancel={() => this.setState({modal2Visible: false})}
                     okText="Detail"
                     cancelText="Back"
