@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import { Card, Modal, Col, Row} from 'antd';
 import 'antd/dist/antd.css';
 import Axios from 'axios'
+import {Redirect} from 'react-router-dom'
+
 import typeColors from './../../assets/helpers/colorCategory'
 // import ModalDetail from './../modal/modal'
 
@@ -21,6 +23,8 @@ class CardPokemon extends Component {
         height: '',
         weight: '',
         types: [],
+
+        isOk: false
         
     }
 
@@ -60,8 +64,9 @@ class CardPokemon extends Component {
         this.dataPokemon(this.props.name)
     }
 
-    onOk = (name) => {
-        window.location.href=`http://localhost:3000/#/detail/${name}`
+    onOk = () => {
+        this.setState({isOk: true})
+        // window.location.href=`http://localhost:3000/#/detail/${name}`
     }
 
     getImage = (url) => {
@@ -109,12 +114,12 @@ class CardPokemon extends Component {
                     style={{fontFamily:'Segoe UI'}}
                     centered
                     visible={this.state.modal2Visible}
-                    onOk={() => this.onOk(this.props.name)}
+                    onOk={() => this.onOk()}
                     onCancel={() => this.setState({modal2Visible: false})}
                     okText="Detail"
                     cancelText="Back"
                 >
-                    
+                    {this.state.isOk ? <Redirect to={`/detail/${this.props.name}`} /> : null}
                     <Row>
                         <Col span={18} push={6}>
                             <div style={{fontSize: '11px'}}><b style={{fontWeight: 'bold'}}>Weight</b> &nbsp; : {this.state.weight} lbs</div>

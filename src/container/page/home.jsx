@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import { Input, Card } from 'antd';
 import 'antd/dist/antd.css';
 import Axios from 'axios';
-import CardPokemon from './../../component/card/card'
+import CardPokemon from './../../component/card/card';
+import Dropdown from '../../component/dropdown/dropdown'
 
 // import {getNameAction} from '../../_redux/_action/getNameAction';
 //import Loading from './../../assets/img/loading.gif'
@@ -77,6 +78,7 @@ class Home extends Component{
                     
                     <div className="field">
                         <div className="title">P O K E M O N</div>
+                        {/* <Dropdown/> */}
                         <div className="card-container">
                             {this.state.isLoading !== true ? 
                             

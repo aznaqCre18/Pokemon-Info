@@ -1,0 +1,21 @@
+.dropdown {
+    width: 200px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 20px;
+    position: absolute;
+    left: 20px;
+    top: 355px;
+}
+
+.menu {
+    font-size: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+.catch, .pokedex {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
