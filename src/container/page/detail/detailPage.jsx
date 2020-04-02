@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Axios from 'axios';
-import { Row, Col, Progress } from 'antd'; 
+import { Row, Col, Progress } from 'antd';
+import {Link} from 'react-router-dom' 
 import 'antd/dist/antd.css';
 import './detailPage.css';
 import colorCategory from '../../../assets/helpers/colorCategory'
@@ -138,8 +139,10 @@ class DetailPage extends Component {
         return (
             <>
                 <div className="header">    
-                        <img className="headerImg" src={require("./../../../assets/img/pokemon.png")} alt="Header" onClick={() => window.location.href="http://localhost:3000/"}/>
-                            
+                    <Link to="/">
+                        <img className="headerImg" src={require("./../../../assets/img/pokemon.png")} alt="Header"/>
+                    </Link>
+
                         <ul className="menuBar">
                             <li className="github" onClick={() => (window.open("https://github.com/aznaqCre18/"))}><div className="git">Github</div></li>
                             <li className="line">|</li>
